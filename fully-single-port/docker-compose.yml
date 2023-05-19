@@ -6,7 +6,7 @@ services:
     network_mode: host
 
     environment:
-      UVICORN_UDS: "/run/marzban.socket"
+      UVICORN_UDS: "/run/fullmarzban-marzban.socket"
       SQLALCHEMY_DATABASE_URL: "sqlite:////var/lib/marzban/db.sqlite3"
       XRAY_JSON: "/xray_config.json"
       XRAY_FALLBACK_INBOUND_TAG: "TROJAN_FALLBACK_INBOUND"

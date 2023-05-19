@@ -5,7 +5,7 @@
     "inbounds": [
         {
             "tag": "TROJAN_FALLBACK_INBOUND",
-            "port": 443,
+            "port": 8443,
             "protocol": "trojan",
             "settings": {
                 "clients": [],
@@ -38,11 +38,11 @@
                     },
                     {
                         "alpn": "h2",
-                        "dest": "/run/nginx-h2c.socket",
+                        "dest": "/run/fullmarzban-nginx-h2c.socket",
                         "xver": 2
                     },
                     {
-                        "dest": "/run/nginx-h1.socket",
+                        "dest": "/run/fullmarzban-nginx-h1.socket",
                         "xver": 2
                     }
                 ]
@@ -208,7 +208,7 @@
         },
         {
             "tag": "TROJAN_GRPC_INBOUND",
-            "listen": "/run/xray-trojan-grpc.socket,0666",
+            "listen": "/run/fullmarzban-xray-trojan-grpc.socket,0666",
             "protocol": "trojan",
             "settings": {
                 "clients": []
@@ -223,7 +223,7 @@
         },
         {
             "tag": "VLESS_GRPC_INBOUND",
-            "listen": "/run/xray-vless-grpc.socket,0666",
+            "listen": "/run/fullmarzban-xray-vless-grpc.socket,0666",
             "protocol": "vless",
             "settings": {
                 "clients": [],
@@ -239,7 +239,7 @@
         },
         {
             "tag": "VMESS_GRPC_INBOUND",
-            "listen": "/run/xray-vmess-grpc.socket,0666",
+            "listen": "/run/fullmarzban-xray-vmess-grpc.socket,0666",
             "protocol": "vmess",
             "settings": {
                 "clients": []
