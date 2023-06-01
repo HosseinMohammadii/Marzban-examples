@@ -59,7 +59,8 @@ curl https://get.acme.sh | sh -s email=YOUR_EMAIL
 mkdir -p /var/lib/marzban/certs/
 ~/.acme.sh/acme.sh --issue --standalone -d YOUR_DOMAIN \
 --key-file /var/lib/marzban/certs/key.pem \
---fullchain-file /var/lib/marzban/certs/fullchain.pem
+--fullchain-file /var/lib/marzban/certs/fullchain.pem \
+--cert-file /var/lib/marzban/certs/cert.cer
 ```
 
 Eventually, go edit `xray_config.json` file and find the commented part of tls settings and uncomment it by removing all `//` at start of lines. and do NOT forget to change the `SERVER_NAME` with your domain.
